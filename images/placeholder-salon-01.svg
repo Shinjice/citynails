@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Salon interieur">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d4c2a5"/>
+      <stop offset="1" stop-color="#809671"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#g)"/>
+  <circle cx="624" cy="132" r="100" fill="#fff" opacity=".18"/>
+  <circle cx="144" cy="492" r="150" fill="#fff" opacity=".12"/>
+  <g fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity=".9" transform="translate(360 180)">
+    <rect x="0" y="12" width="80" height="62" rx="10"/>
+    <circle cx="40" cy="43" r="14"/>
+    <path d="M26 12l6-10h16l6 10"/>
+  </g>
+  <text x="50%" y="330" text-anchor="middle" font-family="Georgia, serif" font-size="41" fill="#fff" font-weight="700">Salon interieur</text>
+  <text x="50%" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="29" fill="#fff" opacity=".9">Foto volgt · 1200x900 px</text>
+</svg>
