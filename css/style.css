@@ -359,6 +359,8 @@ html { scrollbar-color: var(--sage) var(--sand-pale); scrollbar-width: thin; }
   .site-nav:not(.is-scrolled) .nav-link.active { color: var(--sand); }
   .site-nav:not(.is-scrolled) .nav-link::after { background: var(--sand); }
   .site-nav:not(.is-scrolled) .btn-book { background: var(--cream); color: var(--ink); box-shadow: none; }
+  .site-nav.is-scrolled .btn-book { opacity: 0; pointer-events: none; transition: opacity .3s ease; }
+  .site-nav:not(.is-scrolled) .btn-book { transition: opacity .3s ease; }
 }
 
 /* ==========================================================================
