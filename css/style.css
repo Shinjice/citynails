@@ -272,7 +272,7 @@ html { scrollbar-color: var(--sage) var(--sand-pale); scrollbar-width: thin; }
 .pulse-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--sand); box-shadow: 0 0 0 0 rgba(212, 194, 165, .7); animation: ping 2s infinite; }
 @keyframes ping { 70% { box-shadow: 0 0 0 12px rgba(212, 194, 165, 0); } 100% { box-shadow: 0 0 0 0 rgba(212, 194, 165, 0); } }
 
-.hero__title { font-size: clamp(3rem, 8vw, 6rem); letter-spacing: .03em; margin-bottom: 1.1rem; color: #fff; text-shadow: 0 0 50px rgba(212, 194, 165, .35); perspective: 600px; }
+.hero__title { font-size: clamp(3rem, 8vw, 6rem); letter-spacing: .03em; margin-bottom: 1.1rem; color: #fff; text-shadow: 0 0 50px rgba(212, 194, 165, .35); perspective: 600px; display: flex; justify-content: center; }
 .hero__title i { color: var(--sand); }
 /* Letter-by-letter reveal (letters are created by main.js) */
 .hero__title .char { display: inline-block; opacity: 0; transform: translateY(80%) rotateX(-90deg); transform-origin: 50% 100%; }
@@ -309,7 +309,7 @@ html { scrollbar-color: var(--sage) var(--sand-pale); scrollbar-width: thin; }
 
 /* --- 3D stage --- */
 .hero__stage {
-  position: relative; max-width: 480px; margin: 0 auto; padding: 1.5rem; transform-style: preserve-3d;
+  position: relative; max-width: 480px; margin: 0 auto; padding: 44px; transform-style: preserve-3d;
   transform: perspective(1100px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); transition: transform .25s ease-out;
 }
 .hero__card {
@@ -346,19 +346,6 @@ html { scrollbar-color: var(--sage) var(--sand-pale); scrollbar-width: thin; }
 .glass-chip--c { bottom: 8%; right: 6%; animation-delay: -3.2s; }
 @keyframes bob { 50% { translate: 0 -12px; } }
 
-/* Booking card (glass, always readable) */
-.book-chip {
-  position: absolute; z-index: 3; left: -7%; bottom: 4%; display: flex; align-items: center; gap: .85rem; padding: .7rem 1.1rem .7rem .7rem;
-  border-radius: 22px; text-decoration: none; color: var(--ink); background: rgba(251, 248, 242, .94);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, .35); transform: translateZ(100px); transition: background-color .3s, box-shadow .3s;
-}
-.book-chip:hover { background: #fff; color: var(--ink); box-shadow: 0 22px 48px rgba(0, 0, 0, .45); }
-.book-chip__icon { display: grid; place-items: center; width: 46px; height: 46px; border-radius: 15px; background: var(--sage-deep); color: #fff; font-size: 1.3rem; }
-.book-chip__text { display: flex; flex-direction: column; line-height: 1.25; }
-.book-chip__text strong { font-family: var(--font-display); font-size: 1.05rem; font-weight: 400; letter-spacing: .03em; }
-.book-chip__text small { font-size: .78rem; color: var(--muted); }
-.book-chip__arrow { font-size: 1.2rem; color: var(--sage-deep); transition: transform .3s var(--ease); }
-.book-chip:hover .book-chip__arrow { transform: translateX(5px); }
 
 .scroll-hint { position: absolute; bottom: 5.5rem; left: 50%; transform: translateX(-50%); color: #fff; font-size: 1.6rem; animation: nudge 1.8s ease-in-out infinite; z-index: 1; opacity: .8; }
 @keyframes nudge { 50% { transform: translate(-50%, 8px); } }
@@ -654,8 +641,6 @@ html { scrollbar-color: var(--sage) var(--sand-pale); scrollbar-width: thin; }
   .glass-chip { font-size: .75rem; padding: .45rem .8rem; }
   .glass-chip--a { left: -2%; }
   .glass-chip--b { right: -3%; }
-  .book-chip { left: 0; bottom: 3%; padding: .55rem .9rem .55rem .55rem; }
-  .book-chip__icon { width: 40px; height: 40px; }
   .treatments__list { padding: 1rem .5rem; }
   .treatments__list a { font-size: .95rem; }
   .looks__list li, .contact__list a { padding: 1rem; }
